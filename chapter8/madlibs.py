@@ -2,13 +2,13 @@
 
 # Automate the Boring Stuff -- Chapter 8
 # Practice Projects: Mad Libs
-# Create a Mad Libs style game where the user change can the text for select words
+# Create a Mad Libs style game where the user change can the text for select words located in a specified madlibs.txt file
 
-import os, re
+import re
 
 # Helper function to prompt user input to replace matched text
 def replacer(matchObj):
-        return raw_input("Enter an %s:\n" % matchObj.group(0).lower())
+        return raw_input("Enter an %s: " % matchObj.group(0).lower())
 
 def playMadLibs():
     word_ex = re.compile(r'(ADJECTIVE|NOUN|ADVERB|VERB)')
